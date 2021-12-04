@@ -39,7 +39,7 @@ const monthsEN = [
 
 const stringDate = "02/12/2021";
 
-let dateSplit = stringDate.split("/");
+let dateSplit = stringDate.split("/").map(Number);
 //[0] = day, [1] = month, [2] = year
 
 //FROM: 02/12/2021 TO: 2021-12-02
