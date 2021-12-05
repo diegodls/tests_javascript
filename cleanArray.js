@@ -2,6 +2,7 @@ const LOTOFACIL_MIN_QUANT_CARD_NUM = 1;
 const LOTOFACIL_MAX_QUANT_CARD_NUM = 25;
 
 const arr1 = [
+  22,
   1,
   "2",
   "a",
@@ -10,6 +11,10 @@ const arr1 = [
   7,
   " ",
   67,
+  "?",
+  67,
+  10,
+  10,
   10,
   22,
   25,
@@ -22,9 +27,11 @@ const arr1 = [
   "+",
   "-",
   "=",
-  "?",
+  67,
+  6,
   ".",
   ",",
+  "              ",
 ];
 const arr2 = [1.2, "ASD", "a", 4.5, 6, 7, " ", "67", 10, 22, 25];
 
@@ -49,8 +56,7 @@ function cleanArrNumber(numbers) {
         a.indexOf(b) < 0 &&
         b >= LOTOFACIL_MIN_QUANT_CARD_NUM &&
         b <= LOTOFACIL_MAX_QUANT_CARD_NUM &&
-        !isNaN(b) &&
-        typeof b === "number"
+        Number.isInteger(b)
       )
         a.push(b);
       return a;
@@ -62,8 +68,8 @@ function cleanArrNumber(numbers) {
 const arrClean1 = cleanArrNumber(arr1);
 const arrClean2 = cleanArrNumber(arr2);
 
-//Simplesmente: 
-const arrRegex = arr1.filter(Number.isInteger)
+//Simplesmente:
+const arrRegex = arr1.filter(Number.isInteger);
 
 console.log("arrClean1");
 console.log(arrClean1);

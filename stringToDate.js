@@ -67,4 +67,6 @@ console.log(
   `Month: ${dateJoin.getMonth() + 1} - ${monthsEN[dateJoin.getMonth()]}`
 );
 console.log(`Year: ${dateJoin.getFullYear()}`);
-
+console.log("----------------------------");
+console.log('isNan(dateJoin)');
+console.log(!isNan(dateJoin.getDate()));
